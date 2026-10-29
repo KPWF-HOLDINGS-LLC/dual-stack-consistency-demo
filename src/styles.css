@@ -1,0 +1,9 @@
+:root { font-family: system-ui, sans-serif; color-scheme: light dark; }
+body { margin: 0; padding: 2rem; line-height: 1.5; }
+main { max-width: 55rem; margin: auto; }
+select, button { font: inherit; padding: .55rem; margin: .3rem .5rem .3rem 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; }
+.grid section { border: 1px solid currentColor; border-radius: .5rem; padding: 1rem; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: .4rem .8rem; }
+dt { font-weight: bold; }
+.note { opacity: .75; }

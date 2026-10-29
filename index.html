@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Dual Stack Consistency Demo</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <main>
+    <h1>Dual Stack Consistency</h1>
+    <p>Compare synthetic IPv4 and IPv6 observations. No live network test is performed.</p>
+    <label for="scenario">Sample scenario</label>
+    <select id="scenario">
+      <option value="same">Both families, same network</option>
+      <option value="ipv6_missing">IPv6 unavailable</option>
+      <option value="mixed">Different networks, same country</option>
+      <option value="different">Different network signals</option>
+      <option value="unavailable">Both unavailable</option>
+    </select>
+    <button id="compare" type="button">Compare</button>
+    <section aria-live="polite" aria-labelledby="summary-title">
+      <h2 id="summary-title">Result</h2>
+      <p id="summary"></p>
+    </section>
+    <div class="grid">
+      <section><h2>IPv4</h2><dl id="ipv4"></dl></section>
+      <section><h2>IPv6</h2><dl id="ipv6"></dl></section>
+    </div>
+    <p class="note">These examples show comparison logic only. Network signals cannot identify a person or explain why a route differs.</p>
+  </main>
+</body>
+</html>
